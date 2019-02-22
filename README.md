@@ -1,6 +1,6 @@
 # BDD Sample using cucumber-cpp for CppEurope 2019
 
-This is an example used by Thomas Sundberg and created in collaboration with Alex Bolboaca, showing how to use [cucumber-cpp](https://github.com/cucumber/cucumber-cpp) to run BDD features in C++. To compile cucumber-cpp, we've created [cucumber-cpp-vagrant-build](https://github.com/MozaicWorks/cucumber-cpp-vagrant-build) that provides a repeatable compilation process using a Vagrant virtual machine.
+This is an example used by Thomas Sundberg and created in collaboration with Alex Bolboaca, showing how to use [cucumber-cpp](https://github.com/cucumber/cucumber-cpp) to run BDD features in C++, showcased at [CppEurope 2019](https://cppeurope.com). To compile cucumber-cpp, we've created [cucumber-cpp-vagrant-build](https://github.com/MozaicWorks/cucumber-cpp-vagrant-build) that provides a repeatable compilation process using a Vagrant virtual machine.
 
 ## How to run it
 
