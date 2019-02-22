@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+g++ -I../cucumber-cpp/include -L../cucumber-cpp/lib -L/usr/lib/x86_64-linux-gnu -lboost_unit_test_framework -lboost_program_options -lboost_system -lcucumber-cpp-nomain -o tests.o ./step_definitions/StepsDefinitionRunner.cpp

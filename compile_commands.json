@@ -1,0 +1,14 @@
+[
+    {
+        "arguments": [
+            "c++",
+            "-c",
+            "-I./cucumber-cpp/include",
+            "-o",
+            "toDoListFeaturesTest",
+            "features/step_definitions/StepsDefinitionRunner.cpp"
+        ],
+        "directory": "/home/alexb/work/bdd-cpp-europe",
+        "file": "features/step_definitions/StepsDefinitionRunner.cpp"
+    }
+]
