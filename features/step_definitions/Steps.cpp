@@ -1,24 +1,33 @@
+#include "ToDoList.h"
 #include <cucumber-cpp/autodetect.hpp>
 using cucumber::ScenarioScope;
 
-#include <list>
-using namespace std;
-
-typedef list<string> ToDoList;
-
 struct ToDoListContext {
     ToDoList toDoList;
+    string expectedName;
+    string expectedLastItem;
 };
 
-GIVEN("^that we are out food for the cat$"){
+GIVEN("^that Thomas is out of cat food$"){
+    ScenarioScope<ToDoListContext> context;
+    string name = "Thomas' To Do List";
+
+    context->toDoList.setName(name);
+    context->expectedName = name;
 }
 
-WHEN("^Thomas adds buy food for the cat to his todo list$"){
+WHEN("^he adds 'buy cat food' to his todo list$"){
     ScenarioScope<ToDoListContext> context;
-    context->toDoList.push_back("Buy food for the cat");
+    
+    string buyCatFood = "buy cat food";
+
+    context->toDoList.add(buyCatFood);
+    context->expectedLastItem = buyCatFood;
 }
 
-THEN("^should the todo list contain buy food for the cat$"){ 
+THEN("^Thomas' todo list should contain 'buy cat food'$"){ 
     ScenarioScope<ToDoListContext> context;
-    EXPECT_EQ(1, context->toDoList.size());
+
+    EXPECT_EQ(context->expectedName, context->toDoList.getName());
+    EXPECT_EQ(context->expectedLastItem, context->toDoList.getLast());
 }
