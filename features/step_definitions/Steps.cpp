@@ -16,7 +16,7 @@ GIVEN("^that Thomas is out of cat food$"){
     context->expectedName = name;
 }
 
-WHEN("^he adds 'buy cat food' to his todo list$"){
+WHEN("^he adds buy cat food to his todo list$"){
     ScenarioScope<ToDoListContext> context;
     
     string buyCatFood = "buy cat food";
@@ -25,7 +25,7 @@ WHEN("^he adds 'buy cat food' to his todo list$"){
     context->expectedLastItem = buyCatFood;
 }
 
-THEN("^Thomas' todo list should contain 'buy cat food'$"){ 
+THEN("^should Thomas todo list contain buy cat food$"){
     ScenarioScope<ToDoListContext> context;
 
     EXPECT_EQ(context->expectedName, context->toDoList.getName());
